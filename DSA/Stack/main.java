@@ -1,10 +1,10 @@
-
-class Stack {
+package Stack;
+class Stack1 {
     private int top;
     private int maxSize;
     private String[] stackArray;
 
-    public Stack(int size) {
+    public Stack1(int size) {
         this.maxSize = size;
         this.stackArray = new String[size];
         this.top = -1;
@@ -51,7 +51,7 @@ class Stack {
     }
 }
 
-public class StackExample {
+public class Main {
     public static void main(String[] args) {
         Stack stack = new Stack(5);
         stack.push("A");
