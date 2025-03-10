@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AnimalDemo",
+            "request": "launch",
+            "mainClass": "HomeWork.AnimalDemo",
+            "projectName": "DSAJAVA_fe78f49d"
+        },
+        {
+            "type": "java",
+            "name": "Example1",
+            "request": "launch",
+            "mainClass": "Linklist.Example1",
+            "projectName": "DSAJAVA_fe78f49d"
+        },
+        {
+            "type": "java",
+            "name": "SameExample",
+            "request": "launch",
+            "mainClass": "Linklist.SameExample",
+            "projectName": "DSAJAVA_fe78f49d"
+        },
+        {
+            "type": "java",
+            "name": "MAIN",
+            "request": "launch",
+            "mainClass": "MAIN",
+            "projectName": "DSAJAVA_fe78f49d"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Stack.Main",
+            "projectName": "DSAJAVA_fe78f49d"
+        },
+        {
+            "type": "java",
+            "name": "StackExample",
+            "request": "launch",
+            "mainClass": "Stack.StackExample",
+            "projectName": "DSAJAVA_fe78f49d"
+        }
+    ]
+}
