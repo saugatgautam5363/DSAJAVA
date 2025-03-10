@@ -1,6 +1,6 @@
 package DSA.Linklist;
 
-public class Example1 {
+public class Example2 {
     Node head;
     class Node{
         String data;
@@ -14,37 +14,38 @@ public class Example1 {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
+        return;
     }
-    public void addLast(String data){
+    public  void addLast(String data){
         Node newNode = new Node(data);
         if(head == null){
             head = newNode;
-            return;
         }
         Node currNode = head;
         while(currNode.next != null){
             currNode = currNode.next;
         }
         currNode.next = newNode;
-
     }
-    public void printList(){
+    public void prinLis(){
         if(head == null){
-            System.out.println("List is empty");
+            System.out.println("list is empty!!!");
+            return;
         }
         Node currNode = head;
-        while(currNode != null){
-            System.out.print(currNode.data+" -> ");
+        while(currNode!= null){
+            System.out.print(currNode.data +" -> ");
             currNode = currNode.next;
         }
         System.out.println("NULL");
+
     }
+
     public static void main(String[] args) {
-        
-        Example1 list = new Example1();
-        list.addFrist("B");
-        list.printList();
+        Example2 list = new Example2();
         list.addFrist("A");
-        list.printList();
+        list.prinLis();
+        list.addLast("B");
+        list.prinLis();
     }
 }

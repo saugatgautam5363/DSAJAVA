@@ -1,11 +1,11 @@
 package DSA.Linklist;
 
-public class Example1 {
+public class SameExample {
     Node head;
     class Node{
         String data;
         Node next;
-        Node(String data){
+       public Node(String data){
             this.data = data;
             this.next = null;
         }
@@ -23,28 +23,26 @@ public class Example1 {
         }
         Node currNode = head;
         while(currNode.next != null){
-            currNode = currNode.next;
+            currNode.next = currNode;
         }
-        currNode.next = newNode;
-
+        currNode.next = currNode;
     }
     public void printList(){
         if(head == null){
-            System.out.println("List is empty");
+            System.out.println("List is empty!!");
         }
         Node currNode = head;
         while(currNode != null){
-            System.out.print(currNode.data+" -> ");
+            System.out.println(currNode.data+ " -> ");
             currNode = currNode.next;
         }
         System.out.println("NULL");
     }
     public static void main(String[] args) {
-        
-        Example1 list = new Example1();
-        list.addFrist("B");
-        list.printList();
+        SameExample list = new SameExample();
         list.addFrist("A");
+        list.addFrist("B");
+        list.addLast("C");
         list.printList();
     }
 }
