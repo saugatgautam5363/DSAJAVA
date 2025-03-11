@@ -33,7 +33,7 @@ public class Example2 {
             return;
         }
         Node currNode = head;
-        while(currNode!= null){
+        while(currNode != null){
             System.out.print(currNode.data +" -> ");
             currNode = currNode.next;
         }
