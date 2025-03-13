@@ -1,76 +1,89 @@
 package DSA.Linklist;
-
-public class P {
+class P{
     Node head;
+    private int size;
+    P(){
+        this.size = 0;
+    }
     class Node{
         String data;
         Node next;
+
+
         Node(String data){
             this.data = data;
             this.next = null;
+            size++;
         }
     }
-    public void addFirst(String data){
+    public void addfirst(String data){
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
-    public void addLast(String data){
+
+    public  void LastAdd(String data){
         Node newNode = new Node(data);
         if(head == null){
             head = newNode;
         }
-        Node currNode = head;
-        while (currNode.next != null){
-            currNode = currNode.next;
+        Node currNOde = head;
+        while (currNOde.next != null){
+            currNOde = currNOde.next;
         }
-        currNode.next = newNode;
+        currNOde.next = newNode;
     }
-    public void printList(){
+    public void pintList(){
         if(head == null){
-            System.out.println("List is empty!!!");
+            System.out.println("Stack is empty!!");
             return;
         }
         Node currNode = head;
-        while (currNode != null){
+        while(currNode != null){
             System.out.print(currNode.data+" -> ");
             currNode = currNode.next;
         }
         System.out.println("NULL");
     }
-    public  void deleteFrist(){
+    public  void deleteFirst(){
         if(head == null){
             System.out.println("List is empty!!!");
             return;
         }
+        size--;
         head = head.next;
     }
-    public void deleteLast(){
+    public  void deleteLast(){
         if(head == null){
+            System.out.println("List is empty!!!");
+            return;
+        }
+        size--;
+        if(head.next == null){
             System.out.println("List is empty!!!!");
             return;
         }
-        if(head.next == null){
-            System.out.println("List is empty!!");
-            return;
-        }
         Node secondLastNode = head;
-        while(secondLastNode.next.next != null){
+        while (secondLastNode.next.next != null){
             secondLastNode = secondLastNode.next;
         }
         secondLastNode.next = null;
     }
+
+    public int getSize() {
+        return size;
+    }
+
     public static void main(String[] args) {
         P list = new P();
-        list.addFirst("A");
-        list.printList();
-        list.addFirst("B");
-        list.printList();
-        list.addLast("C");
-        list.printList();
-        list.deleteFrist();
-        list.printList();
-        list.deleteLast();
-        list.printList();
+        list.addfirst("B");
+        list.pintList();
+        list.LastAdd("C");
+        list.pintList();
+        list.deleteFirst();
+        list.pintList();
+        list.deleteFirst();
+        list.pintList();
+        System.out.println("List size: "+list.getSize());
     }
 }

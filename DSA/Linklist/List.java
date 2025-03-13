@@ -21,10 +21,10 @@ class List{
             head = newNode;
         }
         Node currNode = head;
-        while(currNode != null){
+        while(currNode.next != null){
             currNode = currNode.next;
         }
-        currNode = newNode;
+        currNode.next = newNode;
     }
 public  void printList(){
         if(head == null){
