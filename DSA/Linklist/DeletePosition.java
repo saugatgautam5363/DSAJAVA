@@ -72,28 +72,58 @@ public class DeletePosition {
         System.out.println("NULL");
     }
     public void deletePosition(int position) {
-        if (position < 1 || position > size) {
-            System.out.println("Invalid Position!!!");
-            return;
-        }
+         if(position<1 && position>size){
+             System.out.println("Invalid position!!");
+             return;
+         }
 
-        if (position == 1) {
-            deletefirst();
-            return;
-        }
+         if(position == 1){
+             deletefirst();
+             return;
+         }
+         Node3 temp = head;
+         for(int i = 0;i<position-1;i++){
+             temp = temp.next;
+         }
+         if(head.next == null){
+             System.out.println("Node is Not delete position...");
+             return;
+         }
+         temp.next = temp.next.next;
+    }
+    public boolean search(int key){
+         Node3 temp = head;
+         while(temp != null){
+             if(temp.data == key){
+                 return true;
+             }
+             temp = temp.next;
+         }
+         return false;
+    }
+    public void pushspecificposition(int data,int position){
+         if(position<1 || position>size+1){
+             System.out.println("Invalid size!!");
+             return;
+         }
+         Node3 newNode = new Node3(data);
+         if(position == 1){
+           newNode.next = head;
+           head = newNode;
+           size++;
+           return;
+         }else {
+         Node3 temp = head;
+             for(int i = 1;i<position-1;i++){
+                 temp = temp.next;
+             }
+             newNode.next = temp.next;
+             temp.next = newNode;
+         }
+         size++;
 
-        Node3 temp = head;
-        for (int i = 1; i < position - 1; i++) {
-            temp = temp.next;
-        }
 
-        if (temp.next == null) {
-            System.out.println("No node to delete at position " + position);
-            return;
-        }
 
-        temp.next = temp.next.next;
-        size--;
     }
 
 
@@ -111,5 +141,11 @@ public class DeletePosition {
         list.printList();
         list.deletePosition(1);
         list.printList();
+        System.out.println("Search: "+list.search(9));
+        list.pushspecificposition(7,1);
+        list.printList();
+        list.pushspecificposition(3,2);
+        list.printList();
+
     }
 }
