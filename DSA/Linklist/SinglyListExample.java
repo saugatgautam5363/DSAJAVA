@@ -90,6 +90,7 @@ public class SinglyListExample {
             System.out.println("Envalid size!!!");
             return;
         }
+
         if(position == 1){
             deleteFirst();
         }
@@ -125,7 +126,7 @@ public class SinglyListExample {
         list.printList();
         list.addLast(7);
         list.printList();
-        list.Insert(5, 2);
+        list.Insert(5, 0);
         list.printList();
         list.deletePosition(3);
         list.printList();
