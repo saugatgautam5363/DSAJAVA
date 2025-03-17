@@ -3,12 +3,11 @@ package DSA.Linklist;
 public class SinglyListExample {
     Node4 head;
     private int size;
-
-    class Node4 {
+     static class Node4 {
+         Node4 next;
         int data;
-        Node4 next;
-
         Node4(int data) {
+
             this.data = data;
             this.next = null;
         }
@@ -37,27 +36,27 @@ public class SinglyListExample {
             System.out.println("List is empty!!");
             return;
         }
-        size--;
         head = head.next;
+        size--;
     }
     public void deleteLast(){
         if(head == null){
             System.out.println("List is empty!!");
             return;
         }
-        size--;
         Node4 lastNode = head;
 
         while(lastNode.next.next!= null){
             lastNode = lastNode.next;
         }
         lastNode.next = null;
+        size--;
 
     }
 
     public void printList(){
         if(head == null){
-            System.out.println("list is empty!!");
+            System.out.println("list is empty❗❗");
             return;
         }
         Node4 currNode = head;
@@ -68,11 +67,10 @@ public class SinglyListExample {
         System.out.println("NULL");
     }
     public void Insert(int data, int index){
-        if(index<1 || index>size+1){
+        if(index < 1 || index>size+1){
             System.out.println("Invalid Index!!");
-
+            return;
         }
-        size++;
         Node4 newNode = new Node4(data);
         if(index == 1){
             addfirst(data);
@@ -84,6 +82,7 @@ public class SinglyListExample {
         }
         newNode.next = temp.next;
         temp.next = newNode;
+        size++;
     }
     public void deletePosition(int position){
         if(position<1 || position>size){
@@ -99,6 +98,7 @@ public class SinglyListExample {
             temp = temp.next;
         }
         temp.next = temp.next.next;
+        size--;
     }
     public boolean search(int key){
         Node4 temp = head;
@@ -114,6 +114,23 @@ public class SinglyListExample {
     public int getsize(){
         return size;
     }
+    public void reverseList(){
+         if(head == null||head.next == null){
+             return;
+         }
+         Node4 currNode = head;
+         Node4 prvNode = null;
+         Node4 next = null;
+
+         while (currNode != null){
+             next = currNode.next;
+             currNode.next = prvNode;
+
+             prvNode = currNode;
+             currNode = next;
+         }
+         head = prvNode;
+    }
     public static void main(String[] args) {
         SinglyListExample list = new SinglyListExample();
         list.addfirst(6);
@@ -127,11 +144,12 @@ public class SinglyListExample {
         list.addLast(7);
         list.printList();
         list.Insert(5, 0);
-        list.printList();
+        ;list.printList();
         list.deletePosition(3);
         list.printList();
         System.out.println("Element: "+list.search(4));
         System.out.println("Size: "+list.getsize());
-
+        list.reverseList();
+        list.printList();
     }
 }
