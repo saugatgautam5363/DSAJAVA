@@ -22,10 +22,10 @@ public class LeedcodeProblem {
 
     public static void main(String[] args) {
         // Example of creating an object of LeedcodeProblem with a position
-        LeedcodeProblem problem = new LeedcodeProblem(10);
+        LeedcodeProblem problem = new LeedcodeProblem(1);
 
         // Example of creating a NodeList (linked list node) with some data
-        NodeList node = new NodeList(5);
+        NodeList node = new NodeList(0);
 
         // Link the node
         problem.head = node;
