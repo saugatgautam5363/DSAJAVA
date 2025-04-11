@@ -1,4 +1,5 @@
-package Stack;
+
+package DSA.Stack;
 
 class Stack {
     private int top;
