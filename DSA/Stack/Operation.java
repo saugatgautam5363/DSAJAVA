@@ -54,6 +54,5 @@ public class Operation {
         stack.display();
 
         System.out.println("Peek element "+stack.peek());
-
     }
 }
