@@ -1,7 +1,5 @@
 package DSA.Stack;
 
-import javax.swing.text.Element;
-
 public class Other {
     static class Node {
         int data;
@@ -14,46 +12,44 @@ public class Other {
     }
 
     public static class Stack {
-        Node head;
+        static Node head;
 
-        public boolean isEmpty() {
+        public static boolean isEmpty() {
             return head == null;
         }
 
-        public void push(int data) {
+        public static void push(int data) {
             Node newNode = new Node(data);
             newNode.next = head;
             head = newNode;
         }
 
-        public int peek() {
-            if (isEmpty()) {
-                return -1;
-            }
-            return head.data;
-        }
-
-        public int pop() {
+        public static int pop() {
             if (isEmpty()) {
                 return -1;
             }
             int top = head.data;
             head = head.next;
-
             return top;
+        }
+
+        public static int peek() {
+            if (isEmpty()) {
+                return -1;
+            }
+            return head.data;
         }
     }
 
-
     public static void main(String[] args) {
         Stack stack = new Stack();
-        stack.push(96);
-        stack.push(49);
-        stack.push(58);
+        stack.push(40);
+        stack.push(4);
+        stack.push(5);
 
         while (!stack.isEmpty()) {
-            System.out.println("Element: " + stack.peek());
-            stack.pop();
+            System.out.println("Element : " + stack.peek());
+            System.out.println(stack.pop());
         }
     }
 }
