@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DSAJAVA.iml" filepath="$PROJECT_DIR$/.idea/DSAJAVA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Queue/Queue.iml" filepath="$PROJECT_DIR$/Queue/Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Short/Short.iml" filepath="$PROJECT_DIR$/Short/Short.iml" />
       <module fileurl="file://$PROJECT_DIR$/Shorthing/Shorthing.iml" filepath="$PROJECT_DIR$/Shorthing/Shorthing.iml" />
     </modules>
   </component>
