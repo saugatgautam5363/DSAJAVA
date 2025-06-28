@@ -74,6 +74,7 @@ class P{
         return size;
     }
 
+
     public static void main(String[] args) {
         P list = new P();
         list.addfirst("B");
