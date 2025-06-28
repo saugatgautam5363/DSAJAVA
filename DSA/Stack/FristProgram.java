@@ -29,7 +29,6 @@ public class FristProgram {
             arr[++top] = value;
             System.out.println("Pushed: " + value);
         }
-
         int pop() {
             if (isEmpty()) {
                 System.out.println("Stack Underflow!! Cannot pop");
