@@ -24,7 +24,6 @@ public class Hello {
                 return;
             }
             arr[++top] = data;
-//            System.out.println("Stack push value: "+data);
         }
         int pop(){
             if(isEmpty()){
@@ -56,7 +55,6 @@ public class Hello {
         stack.push(0);
         stack.push(6);
         stack.push(9);
-//        stack.pop();
         System.out.println("stack top element: "+stack.peek());
 
         stack.display();
