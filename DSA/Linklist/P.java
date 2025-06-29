@@ -70,6 +70,7 @@ class P{
         secondLastNode.next = null;
     }
 
+
     public int getSize() {
         return size;
     }
