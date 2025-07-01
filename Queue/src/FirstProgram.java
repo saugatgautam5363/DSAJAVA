@@ -48,6 +48,7 @@ public class FirstProgram {
         }
     }
 
+
     public static void main(String[] args) {
         Queue queue = new Queue(5);
         queue.add(9);
