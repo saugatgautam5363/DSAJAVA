@@ -20,6 +20,9 @@ public class DSAProgram {
         size++;
     }
 
+
+
+
     public void delete() {
         if (head == null) {
             System.out.println("List is empty");
