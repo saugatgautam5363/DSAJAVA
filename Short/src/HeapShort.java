@@ -19,6 +19,7 @@ public class HeapShort {
         heap[j] = temp;
     }
 
+
     public void insert(int val) {
         if (size == capacity) {
             System.out.println("Heap full");
