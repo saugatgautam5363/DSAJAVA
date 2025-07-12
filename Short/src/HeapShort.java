@@ -20,6 +20,7 @@ public class HeapShort {
     }
 
 
+
     public void insert(int val) {
         if (size == capacity) {
             System.out.println("Heap full");
